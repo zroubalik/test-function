@@ -3,10 +3,7 @@
  * @param {Context} context a context object containing the HTTP request data
  */
 function handleGet(context) {
-  return {
-    query: context.query,
-    name: context.query.name,
-  }
+  return "hello"
 };
 
 /**
