@@ -1,19 +1,28 @@
+version: 0.19.0
 name: test-function
 namespace: ""
 runtime: node
+registry: ""
 image: ""
 imageDigest: ""
+build: git
+git:
+  url: https://github.com/zroubalik/test-function.git
 builder: gcr.io/paketo-buildpacks/builder:base
 builders:
   base: gcr.io/paketo-buildpacks/builder:base
   default: gcr.io/paketo-buildpacks/builder:base
   full: gcr.io/paketo-buildpacks/builder:full
 buildpacks: []
-healthEndpoints: {}
 volumes: []
 buildEnvs: []
 envs: []
 annotations: {}
 options: {}
 labels: []
-created: 2021-12-07T01:45:22.071827+01:00
+healthEndpoints:
+  liveness: /health/liveness
+  readiness: /health/readiness
+created: 2022-03-31T21:56:29.008414+02:00
+invocation:
+  format: http
