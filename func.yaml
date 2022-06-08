@@ -1,4 +1,4 @@
-version: 0.19.0
+version: 0.23.0
 name: test-function
 namespace: ""
 runtime: node
@@ -8,11 +8,6 @@ imageDigest: ""
 build: git
 git:
   url: https://github.com/zroubalik/test-function.git
-builder: gcr.io/paketo-buildpacks/builder:base
-builders:
-  base: gcr.io/paketo-buildpacks/builder:base
-  default: gcr.io/paketo-buildpacks/builder:base
-  full: gcr.io/paketo-buildpacks/builder:full
 buildpacks: []
 volumes: []
 buildEnvs: []
